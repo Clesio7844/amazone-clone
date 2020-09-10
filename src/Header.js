@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css';
-import SeachIcon from '@material-ui/icons/Search'
+import SeachIcon from '@material-ui/icons/Search';
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
 function Header() {
   return (
@@ -8,35 +9,35 @@ function Header() {
       <img
         className='header__logo'
         src='data:image/png;base64,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'
-        alt=''
+        
       />
 
       <div className='header__search'>
         <input type='text' className='header__searchInput' />
-        <SeachIcon className="header__searchIcon" />
+        <SeachIcon className='header__searchIcon' />
       </div>
+
       <div className='header__nav'>
         <div className='header__option'>
           <spn className='header__optionLineOn'>Hello Guest</spn>
-        </div>
-        <div className='header__option'>
           <spn className='header__optionLineTwo'>Sign In</spn>
         </div>
+
         <div className='header__option'>
           <spn className='header__optionLineOn'>Returns</spn>
+          <spn className='header__optionLineTwo'>&Orders</spn>
         </div>
-        <div className='header__option'>
-          <spn className='header__optionLineTwo'>& Orders</spn>
-        </div>
+
 
         <div className='header__option'>
           <spn className='header__optionLineOn'>Your</spn>
-        </div>
-        <div className='header__option'>
           <spn className='header__optionLineTwo'>Prime</spn>
         </div>
-
-        <div className='header__option'></div>
+       <div className="header__optionBasket">
+           <ShoppingBasketIcon />
+           <span className="header__optionLineTo header__basketCount">0</span>
+       </div>
+        
       </div>
     </div>
   );
